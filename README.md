@@ -1,12 +1,12 @@
 # Prueba Técnica Para Desarrollador Flutter Senior
 
-* Desarrollado por: Santiago Ríos Valero
+* Desarrollada por: Santiago Ríos Valero
 
 ### Objetivo:
 
 Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs, gestión de estados, almacenamiento local y experiencia de usuario en la visualización de contenido multimedia, especialmente videos, en una aplicación Flutter.
 
-### Tecnología usada:
+### Tecnologías usadas:
 
 * Flutter
 * Dart

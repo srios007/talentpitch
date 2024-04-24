@@ -1,16 +1,31 @@
-# talentpitch
+# Prueba Técnica Para Desarrollador Flutter Senior
 
-A new Flutter project.
+* Desarrollado por: Santiago Ríos Valero
 
-## Getting Started
+### Objetivo:
 
-This project is a starting point for a Flutter application.
+Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs, gestión de estados, almacenamiento local y experiencia de usuario en la visualización de contenido multimedia, especialmente videos, en una aplicación Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+### Tecnología usada:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* Flutter
+* Dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Instalación 
+
+Primero, se clona el siguiente repositorio:
+
+```bash
+git clone https://github.com/srios007/talentpitch.git
+```
+
+Segundo, descargar las librerías necesarias: 
+
+```
+flutter pub get
+```
+Tercero, correr la aplicación:
+
+```
+flutter run
+```

@@ -31,7 +31,7 @@ class ImagePickAlert {
           child: const Text(
             'Cancelar',
             style: TextStyle(
-              color: Palette.darkGreen,
+              color: Palette.mainColor,
               fontWeight: FontWeight.w700,
               fontSize: 16,
             ),

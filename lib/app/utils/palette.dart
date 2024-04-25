@@ -8,11 +8,10 @@ class Palette {
   static const red = Color(0xFFD90416);
   static const lightGreen = Color(0xFF00D28A);
   static const green = Color(0xFF00D28A);
-  static const darkGreen = Color(0xFF064C4C);
+  static const mainColor = Color(0xFFDE1C7D);
   static const yellow = Color(0xFFFFFF8F);
   static const white = Color(0xFFF2F2F0);
   static const black = Color(0xFF002200);
-  
 }
 
 Palette palette = Palette();

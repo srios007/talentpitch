@@ -1,3 +1,7 @@
+import 'package:json_annotation/json_annotation.dart';
+part 'user.g.dart';
+
+@JsonSerializable()
 class User {
   String? email;
   String? id;
@@ -13,21 +17,8 @@ class User {
     this.profilePictureUrl,
   });
 
-  User.fromJson(Map<String, dynamic> json) {
-    email = json['email'];
-    id = json['id'];
-    lastname = json['lastname'];
-    name = json['name'];
-    profilePictureUrl = json['profilePictureUrl'];
-  }
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
-  Map<String, dynamic> toJson() {
-    final data = <String, dynamic>{};
-    data['email'] = email;
-    data['id'] = id;
-    data['lastname'] = lastname;
-    data['name'] = name;
-    data['profilePictureUrl'] = profilePictureUrl;
-    return data;
-  }
+  Map<String, dynamic> toJson() => _$UserToJson(this);
 }
+// flutter pub run build_runner watch --delete-conflicting-outputs

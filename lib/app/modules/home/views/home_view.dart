@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import 'package:talentpitch/app/modules/home/controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,9 +11,9 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
+      body:   Center(
         child: Text(
-          'HomeView is working',
+          controller.categories.length.toString() + ' categories',
           style: TextStyle(fontSize: 20),
         ),
       ),

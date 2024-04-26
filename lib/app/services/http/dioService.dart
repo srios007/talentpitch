@@ -5,7 +5,7 @@ class DioClient {
   DioClient._();
 
   static final instance = DioClient._();
-
+ 
   dioConfig() {
     final _dio = Dio(
       BaseOptions(

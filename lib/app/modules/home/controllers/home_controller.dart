@@ -1,23 +1,17 @@
 import 'package:get/get.dart';
+import 'package:talentpitch/app/models/category.dart';
+import 'package:talentpitch/app/services/model_services/category_service.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
+  RxList<Category> categories = <Category>[].obs;
   @override
   void onInit() {
+    getCategories();
     super.onInit();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  getCategories() async {
+    categoryService.getCategories().then((value) => categories.value = value);
+    print(categories.length);
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

@@ -10,7 +10,7 @@ class TabsController extends GetxController {
   late User user;
   @override
   void onInit() {
-    Get.lazyPut(() => HomeController());
+    Get.put(HomeController());
     Get.lazyPut(() => FavoritesController());
     Get.lazyPut(() => ProfileController());
     getCurrentUser();

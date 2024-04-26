@@ -12,17 +12,16 @@ import 'package:talentpitch/firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
- await dotenv.load(fileName: '.env');
+  await dotenv.load(fileName: '.env');
   await GetStorage.init();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
   final box = GetStorage();
-
+  
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -56,8 +55,7 @@ class MyApp extends StatelessWidget {
 String _setInitialRoute() {
   final firebaseUser = auth.getCurrentUser();
   if (firebaseUser != null) {
-    // return Routes.LOGIN;
-    return Routes.HOME;
+    return Routes.TABS;
   } else {
     return Routes.LOGIN;
   }

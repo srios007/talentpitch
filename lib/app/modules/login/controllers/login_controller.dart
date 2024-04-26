@@ -44,7 +44,7 @@ class LoginController extends GetxController {
   _validateLoginResponse(response) async {
     if (response is! String) {
       isLoading.value = false;
-      Get.offAllNamed(Routes.HOME);
+      Get.offAllNamed(Routes.TABS);
     } else {
       CustomSnackBars.showErrorSnackBar(response);
       isLoading.value = false;

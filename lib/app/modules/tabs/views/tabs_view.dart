@@ -19,32 +19,20 @@ class TabsView extends GetView<TabsController> {
           },
           currentIndex: controller.currentIndex.value,
           items: [
-            BottomNavigationBarItem(
-              label: 'Mis Servicios',
-              icon: Icon(
-                Icons.my_library_books,
-                color: controller.currentIndex.value == 0
-                    ? Palette.mainColor
-                    : Colors.grey,
-              ),
+            bottomNavigationBarCustom(
+              label: 'Favoritos',
+              icon: Icons.star,
+              index: 0,
             ),
-            BottomNavigationBarItem(
+            bottomNavigationBarCustom(
               label: 'Inicio',
-              icon: Icon(
-                Icons.home,
-                color: controller.currentIndex.value == 1
-                    ? Palette.mainColor
-                    : Colors.grey,
-              ),
+              icon: Icons.home,
+              index: 1,
             ),
-            BottomNavigationBarItem(
-              label: 'Ajustes',
-              icon: Icon(
-                Icons.settings,
-                color: controller.currentIndex.value == 2
-                    ? Palette.mainColor
-                    : Colors.grey,
-              ),
+            bottomNavigationBarCustom(
+              label: 'Perfil',
+              icon: Icons.person,
+              index: 2,
             ),
           ],
         );
@@ -59,6 +47,22 @@ class TabsView extends GetView<TabsController> {
           ],
         );
       }),
+    );
+  }
+
+  BottomNavigationBarItem bottomNavigationBarCustom({
+    required String label,
+    required IconData icon,
+    required int index,
+  }) {
+    return BottomNavigationBarItem(
+      label: label,
+      icon: Icon(
+        icon,
+        color: controller.currentIndex.value == index
+            ? Palette.mainColor
+            : Colors.grey,
+      ),
     );
   }
 }

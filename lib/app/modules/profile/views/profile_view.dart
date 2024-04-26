@@ -11,9 +11,11 @@ class ProfileView extends GetView<ProfileController> {
         title: const Text('ProfileView'),
         centerTitle: true,
       ),
-      body:   Center(
+      body: Center(
         child: GestureDetector(
-          onTap: () {},
+          onTap: () {
+            controller.logout();
+          },
           child: Text(
             'ProfileView is working',
             style: TextStyle(fontSize: 20),

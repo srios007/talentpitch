@@ -1,28 +1,28 @@
 import 'package:get/get.dart';
 
-import '../modules/favorites/bindings/favorites_binding.dart';
-import '../modules/favorites/views/favorites_view.dart';
-import '../modules/forgotPassword/bindings/forgot_password_binding.dart';
-import '../modules/forgotPassword/views/forgot_password_view.dart';
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
-import '../modules/login/bindings/login_binding.dart';
-import '../modules/login/views/login_view.dart';
-import '../modules/no_internet/bindings/no_internet_binding.dart';
-import '../modules/no_internet/views/no_internet_view.dart';
-import '../modules/profile/bindings/profile_binding.dart';
-import '../modules/profile/views/profile_view.dart';
-import '../modules/register/bindings/register_binding.dart';
-import '../modules/register/views/register_view.dart';
-import '../modules/tabs/bindings/tabs_binding.dart';
-import '../modules/tabs/views/tabs_view.dart';
+import 'package:talentpitch/app/modules/favorites/bindings/favorites_binding.dart';
+import 'package:talentpitch/app/modules/favorites/views/favorites_view.dart';
+import 'package:talentpitch/app/modules/forgotPassword/bindings/forgot_password_binding.dart';
+import 'package:talentpitch/app/modules/forgotPassword/views/forgot_password_view.dart';
+import 'package:talentpitch/app/modules/home/bindings/home_binding.dart';
+import 'package:talentpitch/app/modules/home/views/home_view.dart';
+import 'package:talentpitch/app/modules/login/bindings/login_binding.dart';
+import 'package:talentpitch/app/modules/login/views/login_view.dart';
+import 'package:talentpitch/app/modules/no_internet/bindings/no_internet_binding.dart';
+import 'package:talentpitch/app/modules/no_internet/views/no_internet_view.dart';
+import 'package:talentpitch/app/modules/profile/bindings/profile_binding.dart';
+import 'package:talentpitch/app/modules/profile/views/profile_view.dart';
+import 'package:talentpitch/app/modules/register/bindings/register_binding.dart';
+import 'package:talentpitch/app/modules/register/views/register_view.dart';
+import 'package:talentpitch/app/modules/tabs/bindings/tabs_binding.dart';
+import 'package:talentpitch/app/modules/tabs/views/tabs_view.dart';
 
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.TABS;
 
   static final routes = [
     GetPage(

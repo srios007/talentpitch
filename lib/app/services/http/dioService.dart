@@ -26,11 +26,6 @@ class DioClient {
     return _dio;
   }
 
-  final CacheOptions cacheOptions = CacheOptions(
-    store: MemCacheStore(),
-    policy: CachePolicy.forceCache,
-  );
-
   ///Get Method
   Future<Map<String, dynamic>> get(String path,
       {Map<String, dynamic>? queryParameters,

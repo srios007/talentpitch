@@ -1,6 +1,9 @@
 export 'app_constants.dart';
 export 'connectivity.dart';
+export 'enums/categoryType.dart';
+export 'enums/enums.dart';
 export 'image_picker_alert.dart';
+export 'number_format.dart';
 export 'palette.dart';
 export 'references.dart';
 export 'text_styles.dart';

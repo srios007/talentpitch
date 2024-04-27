@@ -1,6 +1,4 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:get/get.dart';
-import 'package:talentpitch/app/routes/app_pages.dart';
 
 class ConnectionStatus {
   getNormalStatus() async {
@@ -10,7 +8,7 @@ class ConnectionStatus {
     } else if (connectivityResult == ConnectivityResult.wifi) {
       print('I am connected to a wifi network ---------------');
     } else {
-      Get.toNamed(Routes.NO_INTERNET);
+      // Get.toNamed(Routes.NO_INTERNET);
     }
   }
 
@@ -21,7 +19,7 @@ class ConnectionStatus {
     } else if (connectivityResult == ConnectivityResult.wifi) {
       print('I am connected to a wifi network ---------------');
     } else {
-      Get.toNamed(Routes.NO_INTERNET);
+      // Get.toNamed(Routes.NO_INTERNET);
     }
   }
 }

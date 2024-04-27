@@ -8,8 +8,6 @@ import 'package:talentpitch/app/modules/home/bindings/home_binding.dart';
 import 'package:talentpitch/app/modules/home/views/home_view.dart';
 import 'package:talentpitch/app/modules/login/bindings/login_binding.dart';
 import 'package:talentpitch/app/modules/login/views/login_view.dart';
-import 'package:talentpitch/app/modules/no_internet/bindings/no_internet_binding.dart';
-import 'package:talentpitch/app/modules/no_internet/views/no_internet_view.dart';
 import 'package:talentpitch/app/modules/profile/bindings/profile_binding.dart';
 import 'package:talentpitch/app/modules/profile/views/profile_view.dart';
 import 'package:talentpitch/app/modules/register/bindings/register_binding.dart';
@@ -29,11 +27,6 @@ class AppPages {
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
-    ),
-    GetPage(
-      name: _Paths.NO_INTERNET,
-      page: () => const NoInternetView(),
-      binding: NoInternetBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,

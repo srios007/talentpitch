@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:talentpitch/app/utils/utils.dart';
 part 'category.g.dart';
 
 @JsonSerializable()
@@ -6,7 +7,7 @@ class Category {
   String? title;
   String? key;
   String? url;
-  String? type;
+  CategoryType? type;
   String? image;
 
   Category({
@@ -21,4 +22,17 @@ class Category {
       _$CategoryFromJson(json);
 
   Map<String, dynamic> toJson() => _$CategoryToJson(this);
+
+  String translateCategory( ) {
+    switch (type) {
+      case CategoryType.talentees:
+        return 'Talentos';
+      case CategoryType.challenges:
+        return 'Retos';
+      case CategoryType.companies:
+        return 'Empresas';
+      default:
+        return '';
+    }
+  }
 }

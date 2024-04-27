@@ -1,0 +1,1 @@
+export 'categoryType.dart';

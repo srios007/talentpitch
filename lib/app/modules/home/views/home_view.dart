@@ -24,10 +24,12 @@ class HomeView extends GetView<HomeController> {
               child: ListView.builder(
                 itemCount: controller.categories.length,
                 itemBuilder: (context, index) {
-                  return CategoryCard(
-                    controller: controller,
-                    category: controller.categories[index],
-                  );
+                  return index == 0
+                      ? CategoryCard(
+                          controller: controller,
+                          category: controller.categories[index],
+                        )
+                      : null;
                 },
               ),
             ),

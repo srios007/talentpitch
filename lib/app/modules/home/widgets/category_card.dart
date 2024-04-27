@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:talentpitch/app/models/category.dart';
 import 'package:talentpitch/app/modules/home/controllers/home_controller.dart';
+import 'package:talentpitch/app/services/model_services/talentee_service.dart';
 import 'package:talentpitch/app/utils/utils.dart';
 import 'package:talentpitch/app/widgets/widgets.dart';
 
@@ -65,20 +66,41 @@ class CategoryCard extends StatelessWidget {
               ),
             ),
           ),
-          Visibility(
-            visible: category.image != null && category.image!.isNotEmpty,
-            child: ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(20)),
-              child: CachedNetworkImage(
-                imageUrl: category.image!,
-                fit: BoxFit.fill,
-                width: Get.width * 0.3,
-                height: 200,
-                progressIndicatorBuilder: (context, url, downloadProgress) {
-                  return LoadingWidget();
-                },
+          Row(
+            children: [
+              Visibility(
+                visible: category.image != null && category.image!.isNotEmpty,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  child: CachedNetworkImage(
+                    imageUrl: category.image!,
+                    fit: BoxFit.fill,
+                    width: Get.width * 0.3,
+                    height: 200,
+                    progressIndicatorBuilder: (context, url, downloadProgress) {
+                      return LoadingWidget();
+                    },
+                  ),
+                ),
               ),
-            ),
+              FutureBuilder(
+                future: talenteeService.getTalentees(category.url!),
+                builder: (context, item) {
+                  return Visibility(
+                    visible: item.connectionState == ConnectionState.done,
+                    replacement: const LoadingWidget(),
+                    child: Expanded(
+                      child: ListView.builder(
+                        itemCount: item.data!.length,
+                        itemBuilder: (context, index) {
+                          return Text(item.data![index].about!);
+                        },
+                      ),
+                    ),
+                  );
+                },
+              )
+            ],
           ),
         ],
       ),

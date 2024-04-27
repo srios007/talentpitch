@@ -4,6 +4,7 @@ import 'package:talentpitch/app/services/model_services/category_service.dart';
 
 class HomeController extends GetxController {
   RxList<Category> categories = <Category>[].obs;
+  final isLoading = false.obs;
   @override
   void onInit() {
     getCategories();
@@ -11,7 +12,8 @@ class HomeController extends GetxController {
   }
 
   getCategories() async {
+    isLoading.value = true;
     categoryService.getCategories().then((value) => categories.value = value);
-    print(categories.length);
+    isLoading.value = false;
   }
 }

@@ -15,9 +15,11 @@ class CategoryService {
     try {
       final response =
           await DioClient.instance.get('/homeservice/categories/all/12');
-      print('Response $response');
-      final categoryList =
-          (response['data'] as List).map((e) => Category.fromJson(e)).toList();
+      final categoryList = (response['data'] as List)
+          .map(
+            (e) => Category.fromJson(e),
+          )
+          .toList();
       return categoryList;
     } on DioException catch (e) {
       final error = DioExceptions.fromDioError(e);

@@ -40,7 +40,7 @@ class CategoryCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           title(),
-          categoryLabel(),
+          categoryLabel(setCategoryColor()),
           SizedBox(
             width: Get.width,
             height: 190,
@@ -54,6 +54,7 @@ class CategoryCard extends StatelessWidget {
     );
   }
 
+  /// Determina que cards cargar en la lista por tipo de categoría
   itemsBuilder() {
     if (category.type == CategoryType.talentees) {
       return TalenteeItemsBuilder(category: category);
@@ -63,6 +64,18 @@ class CategoryCard extends StatelessWidget {
       return CompanyItemsBuilder(category: category);
     }
     return TalenteeItemsBuilder(category: category);
+  }
+
+  /// Determina el color del card por tipo de categoría
+  setCategoryColor() {
+    if (category.type == CategoryType.talentees) {
+      return Palette.mainColor;
+    } else if (category.type == CategoryType.challenges) {
+      return Palette.gray;
+    } else if (category.type == CategoryType.companies) {
+      return Palette.blue;
+    }
+    return Palette.mainColor;
   }
 
   /// Imagen principal de la categoría
@@ -100,21 +113,21 @@ class CategoryCard extends StatelessWidget {
   }
 
   /// Label del container de la categoría
-  categoryLabel() {
+  categoryLabel(Color color) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10),
       height: 20,
       width: 100,
       decoration: BoxDecoration(
-        color: Palette.mainColor.withOpacity(0.3),
+        color: color.withOpacity(0.3),
         borderRadius: BorderRadius.circular(7),
       ),
       child: Center(
         child: Text(
           category.translateCategory(),
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 12,
-            color: Palette.mainColor,
+            color: color,
             fontWeight: FontWeight.bold,
           ),
         ),

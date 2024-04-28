@@ -12,6 +12,9 @@ class Palette {
   static const yellow = Color(0xFFFFFF8F);
   static const white = Color(0xFFF2F2F0);
   static const black = Color(0xFF002200);
+  static const blue = Color(0xFF1A237E);
+  static const gray = Color(0xFF666666);
+  
 }
 
 Palette palette = Palette();

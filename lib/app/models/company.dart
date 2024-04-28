@@ -7,12 +7,14 @@ class Company {
   String? description;
   String? logo;
   String? name;
+  String? video;
 
   Company({
     this.city,
     this.description,
     this.logo,
     this.name,
+    this.video,
   });
 
     factory Company.fromJson(Map<String, dynamic> json) =>

@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'talent.g.dart';
- 
+
 @JsonSerializable()
 class Talent {
   String? about;
@@ -23,7 +23,7 @@ class Talent {
     this.id,
     this.name,
   });
-   factory Talent.fromJson(Map<String, dynamic> json) => _$TalentFromJson(json);
+  factory Talent.fromJson(Map<String, dynamic> json) => _$TalentFromJson(json);
 
   Map<String, dynamic> toJson() => _$TalentToJson(this);
 }

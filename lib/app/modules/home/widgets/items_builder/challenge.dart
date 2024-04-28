@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:talentpitch/app/models/category.dart';
-import 'package:talentpitch/app/services/model_services/talentee_service.dart';
+import 'package:talentpitch/app/services/services.dart';
 import 'package:talentpitch/app/widgets/widgets.dart';
 
 class ChallengeItemsBuilder extends StatelessWidget {
@@ -14,7 +14,7 @@ class ChallengeItemsBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: talenteeService.getTalentees(category.url!),
+      future: challengeService.getChallenges(category.url!),
       initialData: [],
       builder: (context, items) {
         return Visibility(

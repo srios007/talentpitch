@@ -21,7 +21,7 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: Get.width,
-      height: 300,
+      height: 280,
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -43,7 +43,7 @@ class CategoryCard extends StatelessWidget {
           categoryLabel(),
           SizedBox(
             width: Get.width,
-            height: 210,
+            height: 190,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [categoryImage(), itemsBuilder()],
@@ -69,16 +69,19 @@ class CategoryCard extends StatelessWidget {
   categoryImage() {
     return Visibility(
       visible: category.image != null && category.image!.isNotEmpty,
-      child: ClipRRect(
-        borderRadius: const BorderRadius.all(Radius.circular(20)),
-        child: CachedNetworkImage(
-          imageUrl: category.image!,
-          fit: BoxFit.fill,
-          width: Get.width * 0.3,
-          height: 200,
-          progressIndicatorBuilder: (context, url, downloadProgress) {
-            return LoadingWidget();
-          },
+      child: Padding(
+        padding: const EdgeInsets.only(right: 10),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
+          child: CachedNetworkImage(
+            imageUrl: category.image!,
+            fit: BoxFit.fill,
+            width: Get.width * 0.3,
+            height: 200,
+            progressIndicatorBuilder: (context, url, downloadProgress) {
+              return LoadingWidget();
+            },
+          ),
         ),
       ),
     );

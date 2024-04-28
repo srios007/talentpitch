@@ -1,6 +1,9 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:talentpitch/app/models/category.dart';
+import 'package:talentpitch/app/routes/app_pages.dart';
 import 'package:talentpitch/app/services/model_services/talentee_service.dart';
+import 'package:talentpitch/app/utils/utils.dart';
 import 'package:talentpitch/app/widgets/widgets.dart';
 
 class TalenteeItemsBuilder extends StatelessWidget {
@@ -20,17 +23,51 @@ class TalenteeItemsBuilder extends StatelessWidget {
         return Visibility(
           visible: items.connectionState == ConnectionState.done,
           replacement: const LoadingWidget(),
-          child: Row(
-            children: [
-              ...items.data!.map((e) {
-                return SizedBox(
-                  height: 200,
-                  width: 100,
-                  child: Text(e.name!),
-                );
-              })
-            ],
-          ),
+          child: Row(children: [
+            ...items.data!.map((e) {
+              return GestureDetector(
+                onTap: () => Get.toNamed(Routes.VIDEO_PLAYER),
+                child: Container(
+                  height: 250,
+                  width: 120,
+                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Palette.mainColor, width: 1),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: NetworkImage(e.avatar!),
+                      ),
+                      Text(
+                        e.name!,
+                        style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                      ),
+                      Text(
+                        e.career!,
+                        style: const TextStyle(
+                          fontSize: 10,
+                          color: Colors.grey,
+                        ),
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            })
+          ]),
         );
       },
     );

@@ -10,6 +10,7 @@ abstract class Routes {
   static const TABS = _Paths.TABS;
   static const PROFILE = _Paths.PROFILE;
   static const FAVORITES = _Paths.FAVORITES;
+  static const VIDEO_PLAYER = _Paths.VIDEO_PLAYER;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const TABS = '/tabs';
   static const PROFILE = '/profile';
   static const FAVORITES = '/favorites';
+  static const VIDEO_PLAYER = '/video-player';
 }

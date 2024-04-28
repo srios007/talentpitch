@@ -26,7 +26,17 @@ class CompanyItemsBuilder extends StatelessWidget {
           child: Row(children: [
             ...items.data!.map((e) {
               return GestureDetector(
-                onTap: () => Get.toNamed(Routes.VIDEO_PLAYER),
+                onTap: () {
+                  if (e.video == '') {
+                    CustomSnackBars.showErrorSnackBar(
+                        'No hay video disponible en este momento');
+                  } else {
+                    Get.toNamed(Routes.VIDEO_PLAYER, arguments: {
+                      'title': e.name,
+                      'urlVideo': e.video,
+                    });
+                  }
+                },
                 child: Container(
                   height: 250,
                   width: 120,

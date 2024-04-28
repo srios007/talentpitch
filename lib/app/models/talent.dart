@@ -12,7 +12,8 @@ class Talent {
   String? email;
   int? id;
   String? name;
-
+  @JsonKey(name: 'video_url')
+  String? videoUrl;
   Talent({
     this.about,
     this.avatar,
@@ -22,6 +23,7 @@ class Talent {
     this.email,
     this.id,
     this.name,
+    this.videoUrl,
   });
   factory Talent.fromJson(Map<String, dynamic> json) => _$TalentFromJson(json);
 

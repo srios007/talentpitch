@@ -19,14 +19,17 @@ class ChallengeItemsBuilder extends StatelessWidget {
     return FutureBuilder(
       future: challengeService.getChallenges(category.url!),
       initialData: [],
-       builder: (context, items) {
+      builder: (context, items) {
         return Visibility(
           visible: items.connectionState == ConnectionState.done,
           replacement: const LoadingWidget(),
           child: Row(children: [
             ...items.data!.map((e) {
               return GestureDetector(
-                onTap: () => Get.toNamed(Routes.VIDEO_PLAYER),
+                onTap: () => Get.toNamed(Routes.VIDEO_PLAYER, arguments: {
+                  'title': e.companyName,
+                  'urlVideo': e.video,
+                }),
                 child: Container(
                   height: 250,
                   width: 120,

@@ -15,6 +15,7 @@ Talent _$TalentFromJson(Map<String, dynamic> json) => Talent(
       email: json['email'] as String?,
       id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
+      videoUrl: json['video_url'] as String?,
     );
 
 Map<String, dynamic> _$TalentToJson(Talent instance) => <String, dynamic>{
@@ -26,4 +27,5 @@ Map<String, dynamic> _$TalentToJson(Talent instance) => <String, dynamic>{
       'email': instance.email,
       'id': instance.id,
       'name': instance.name,
+      'video_url': instance.videoUrl,
     };

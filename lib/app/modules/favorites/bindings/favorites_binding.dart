@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
-
-import '../controllers/favorites_controller.dart';
+import 'package:talentpitch/app/modules/favorites/controllers/favorites_controller.dart';
 
 class FavoritesBinding extends Bindings {
   @override

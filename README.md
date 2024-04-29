@@ -1,6 +1,6 @@
 # Prueba Técnica Para Desarrollador Flutter Senior
 
-* Desarrollada por: Santiago Ríos Valero
+* Desarrollada por: Santiago Ríos Valero.
 
 ### Objetivo:
 
@@ -28,11 +28,12 @@ Se realizó una aplicación que permite a los usuarios lo siguiente:
 * Ver el perfil del usuario, donde podrá ver su información y foto de perfil
 * Cerrar sesión
 
-### Justificación de tecnologías:
+### Justificación de la prueba:
 
 * Se utilizó **GetX** como manejador de estado, ya que esta nos brinda, navegación, alertas, uso de controladores para el manejo del estado, entre otros. Además, es una librería que se integra muy bien con flutter y es muy fácil de usar.
-* Para la persistencia local de los favoritos se utilizó **Get Storage**, ya que es una librería muy sencilla de usar para obtener y guardar información.
-
+* Para la persistencia local de los favoritos se utilizó la librería **Get Storage**, ya que es una librería muy sencilla de usar para obtener y guardar información
+* Para el reproducir los videos se utilizó la librería **Video Payer**, ya que es una librería muy completa y fácil de usar para reproducir videos en flutter
+* En cuanto a las decisiones de diseño, me basé en sus colores primarios de la aplicación publicada en tiendas y en la distribución de las categorías
 
 ### Instalación 
 

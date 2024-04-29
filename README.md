@@ -22,9 +22,11 @@ Primero, se clona el siguiente repositorio:
 git clone https://github.com/srios007/talentpitch.git
 ```
 
-Segundo, agregar el archivo .env en la raíz del proyecto, este está adjunto en el entregable de la prueba técnica.
+Segundo, agregar el archivo .env en la raíz del proyecto, este está adjunto en el entregable de la prueba técnica como un .txt.
 
-Tercero, descargar las librerías necesarias: 
+Tercero, agregar el archivo key.properties en la carpeta android, este está adjunto en el entregable de la prueba técnica como un .txt. Debe ajustar la ruta del storeFile, este está ubicado en la carpeta key del proyecto.
+
+Cuarto, descargar las librerías necesarias: 
 
 ```
 flutter pub get

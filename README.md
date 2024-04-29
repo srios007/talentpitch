@@ -16,7 +16,7 @@ Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs,
 
 ### Instalación 
 
-1. Se clona el siguiente repositorio:
+1. Clonar el siguiente repositorio:
 
 ```bash
 git clone https://github.com/srios007/talentpitch.git

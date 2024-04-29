@@ -10,6 +10,9 @@ Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs,
 
 * Flutter
 * Dart
+* Firebase authentication
+* Firebase storage
+* Firestore
 
 ### Instalación 
 
@@ -19,12 +22,14 @@ Primero, se clona el siguiente repositorio:
 git clone https://github.com/srios007/talentpitch.git
 ```
 
-Segundo, descargar las librerías necesarias: 
+Segundo, agregar el archivo .env en la raíz del proyecto, este está adjunto el entrgable junto al apk..
+
+Tercero, descargar las librerías necesarias: 
 
 ```
 flutter pub get
 ```
-Tercero, correr la aplicación:
+Cuarto, correr la aplicación:
 
 ```
 flutter run

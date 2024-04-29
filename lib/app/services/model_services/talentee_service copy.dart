@@ -15,7 +15,6 @@ class CompanyService {
     try {
       final response =
           await DioClient.instance.get(url);
-      print('Response $response');
       final CompanyList =
           (response['data'] as List).map((e) => Company.fromJson(e)).toList();
       return CompanyList;

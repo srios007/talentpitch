@@ -20,15 +20,15 @@ class ProfileView extends GetView<ProfileController> {
           SliverFillRemaining(
             hasScrollBody: false,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 20),
                   userPhoto(),
                   const SizedBox(height: 40),
                   userInfoLabels(),
-                  const SizedBox(height: 20)
+                  const Spacer(),
+                  logoutIconLabel(context),
                 ],
               ),
             ),
@@ -38,6 +38,34 @@ class ProfileView extends GetView<ProfileController> {
     );
   }
 
+  /// Widget con el cual el usuario pued ecerrar sesión
+  logoutIconLabel(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        controller.logout();
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Cerrar sesión',
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    fontWeight: FontWeight.w500,
+                  ),
+            ),
+            Icon(
+              Icons.exit_to_app,
+              color: Palette.mainColor,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// Información del usuario
   userInfoLabels() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,6 +82,7 @@ class ProfileView extends GetView<ProfileController> {
     );
   }
 
+  /// FMuestra la foto del usuario haya cargado o no una
   userPhoto() {
     return Align(
       alignment: Alignment.center,

@@ -73,7 +73,6 @@ class RegisterController extends GetxController {
           isLoadingPP.value = false;
         }
       } catch (e) {
-        print(e);
         CustomSnackBars.showErrorSnackBar(
           'Hubo un error al cargar tu foto de perfil',
         );
@@ -165,7 +164,6 @@ class RegisterController extends GetxController {
 
         isLoading.value = false;
       } catch (e) {
-        print(e.toString());
         await auth.deleteUser();
         CustomSnackBars.showErrorSnackBar(
           'Error al crear el usuario, por favor intenta de nuevo',

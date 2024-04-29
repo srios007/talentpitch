@@ -15,7 +15,6 @@ class ChallengeService {
     try {
       final response =
           await DioClient.instance.get(url);
-      print('Response $response');
       final ChallengeList =
           (response['data'] as List).map((e) => Challenge.fromJson(e)).toList();
       return ChallengeList;

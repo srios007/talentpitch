@@ -15,7 +15,8 @@ class ProfileController extends GetxController {
     super.onInit();
   }
 
-  void logout() async {
+  ///  Cerrar sesión y redirigir a la pantalla de inicio de sesión
+  logout() async {
     if (await auth.signOut()) {
       Get.offAllNamed(Routes.LOGIN);
     } else {

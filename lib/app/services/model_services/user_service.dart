@@ -14,7 +14,6 @@ class UserService {
   static final UserService _instance = UserService._internal();
   var firestore = FirebaseFirestore.instance;
 
-
   Future<bool> save({
     required User user,
     required String customId,
@@ -55,8 +54,6 @@ class UserService {
     );
     return user;
   }
-
- 
 }
 
 UserService userService = UserService();

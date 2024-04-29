@@ -15,7 +15,6 @@ class TalenteeService {
     try {
       final response =
           await DioClient.instance.get(url);
-      print('Response $response');
       final TalenteeList =
           (response['data'] as List).map((e) => Talent.fromJson(e)).toList();
       return TalenteeList;

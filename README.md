@@ -22,7 +22,7 @@ Primero, se clona el siguiente repositorio:
 git clone https://github.com/srios007/talentpitch.git
 ```
 
-Segundo, agregar el archivo .env en la raíz del proyecto, este está adjunto el entrgable junto al apk..
+Segundo, agregar el archivo .env en la raíz del proyecto, este está adjunto en el entregable de la prueba técnica.
 
 Tercero, descargar las librerías necesarias: 
 

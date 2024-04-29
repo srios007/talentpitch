@@ -16,22 +16,22 @@ Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs,
 
 ### Instalación 
 
-Primero, se clona el siguiente repositorio:
+1. Se clona el siguiente repositorio:
 
 ```bash
 git clone https://github.com/srios007/talentpitch.git
 ```
 
-Segundo, agregar el archivo .env en la raíz del proyecto, este está adjunto en el entregable de la prueba técnica como un .txt.
+2. Agregar el archivo .env en la raíz del proyecto, este está adjunto en el entregable de la prueba técnica como un .txt.
 
-Tercero, agregar el archivo key.properties en la carpeta android, este está adjunto en el entregable de la prueba técnica como un .txt. Debe ajustar la ruta del storeFile, este está ubicado en la carpeta key del proyecto.
+3. Agregar el archivo key.properties en la carpeta android, este está adjunto en el entregable de la prueba técnica como un .txt. Debe ajustar la ruta del storeFile, este está ubicado en la carpeta key del proyecto.
 
-Cuarto, descargar las librerías necesarias: 
+4. Descargar las librerías necesarias: 
 
 ```
 flutter pub get
 ```
-Cuarto, correr la aplicación:
+5. Correr la aplicación:
 
 ```
 flutter run

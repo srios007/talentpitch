@@ -2,11 +2,11 @@
 
 * Desarrollada por: Santiago Ríos Valero.
 
-### Objetivo:
+### Objetivo
 
 Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs, gestión de estados, almacenamiento local y experiencia de usuario en la visualización de contenido multimedia, especialmente videos, en una aplicación Flutter.
 
-### Tecnologías usadas:
+### Tecnologías usadas
 
 * Flutter
 * Dart
@@ -14,7 +14,7 @@ Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs,
 * Firebase storage
 * Firestore
 
-### Descripción del reto realizado:
+### Descripción del reto realizad
 
 Se realizó una aplicación que permite a los usuarios lo siguiente:
 

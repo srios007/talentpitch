@@ -30,6 +30,9 @@ class ChallengeItemsBuilder extends StatelessWidget {
                 onTap: () => controller.validateGoToVideoPlayer(
                   urlVideo: e.video,
                   title: e.companyName,
+                  subtitle: e.description,
+                  label: e.requirements,
+                  imageUrl: e.companyLogo,
                 ),
                 child: Container(
                   height: 250,

@@ -1,21 +1,23 @@
 import 'package:get/get.dart';
 
-import 'package:talentpitch/app/modules/favorites/bindings/favorites_binding.dart';
-import 'package:talentpitch/app/modules/favorites/views/favorites_view.dart';
-import 'package:talentpitch/app/modules/forgotPassword/bindings/forgot_password_binding.dart';
-import 'package:talentpitch/app/modules/forgotPassword/views/forgot_password_view.dart';
-import 'package:talentpitch/app/modules/home/bindings/home_binding.dart';
-import 'package:talentpitch/app/modules/home/views/home_view.dart';
-import 'package:talentpitch/app/modules/login/bindings/login_binding.dart';
-import 'package:talentpitch/app/modules/login/views/login_view.dart';
-import 'package:talentpitch/app/modules/profile/bindings/profile_binding.dart';
-import 'package:talentpitch/app/modules/profile/views/profile_view.dart';
-import 'package:talentpitch/app/modules/register/bindings/register_binding.dart';
-import 'package:talentpitch/app/modules/register/views/register_view.dart';
-import 'package:talentpitch/app/modules/tabs/bindings/tabs_binding.dart';
-import 'package:talentpitch/app/modules/tabs/views/tabs_view.dart';
-import 'package:talentpitch/app/modules/video_player/bindings/video_player_binding.dart';
-import 'package:talentpitch/app/modules/video_player/views/video_player_view.dart';
+import '../modules/favorites/bindings/favorites_binding.dart';
+import '../modules/favorites/views/favorites_view.dart';
+import '../modules/forgotPassword/bindings/forgot_password_binding.dart';
+import '../modules/forgotPassword/views/forgot_password_view.dart';
+import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/home_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
+import '../modules/no_video/bindings/no_video_binding.dart';
+import '../modules/no_video/views/no_video_view.dart';
+import '../modules/profile/bindings/profile_binding.dart';
+import '../modules/profile/views/profile_view.dart';
+import '../modules/register/bindings/register_binding.dart';
+import '../modules/register/views/register_view.dart';
+import '../modules/tabs/bindings/tabs_binding.dart';
+import '../modules/tabs/views/tabs_view.dart';
+import '../modules/video_player/bindings/video_player_binding.dart';
+import '../modules/video_player/views/video_player_view.dart';
 
 part 'app_routes.dart';
 
@@ -72,6 +74,11 @@ class AppPages {
       page: () => const VideoPlayerView(),
       binding: VideoPlayerBinding(),
       transition: Transition.native,
+    ),
+    GetPage(
+      name: _Paths.NO_VIDEO,
+      page: () => const NoVideoView(),
+      binding: NoVideoBinding(),
     ),
   ];
 }

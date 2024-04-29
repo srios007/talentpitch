@@ -30,6 +30,9 @@ class CompanyItemsBuilder extends StatelessWidget {
                 onTap: () => controller.validateGoToVideoPlayer(
                   urlVideo: e.video,
                   title: e.name,
+                  subtitle: e.description,
+                  label: e.city,
+                  imageUrl: e.logo,
                 ),
                 child: Container(
                   height: 250,

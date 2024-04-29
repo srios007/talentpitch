@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:talentpitch/app/models/category.dart';
 import 'package:talentpitch/app/routes/app_pages.dart';
 import 'package:talentpitch/app/services/model_services/category_service.dart';
-import 'package:talentpitch/app/widgets/widgets.dart';
 
 class HomeController extends GetxController {
   RxList<Category> categories = <Category>[].obs;
@@ -19,10 +18,26 @@ class HomeController extends GetxController {
     isLoading.value = false;
   }
 
-  validateGoToVideoPlayer({required String urlVideo, required String title}) {
+  validateGoToVideoPlayer({
+    required String urlVideo,
+    required String title,
+    String? subtitle,
+    String? label,
+    String? imageUrl,
+  }) {
     if (urlVideo == '') {
-      CustomSnackBars.showErrorSnackBar(
-          'No hay video disponible en este momento');
+      print({
+        'title': title,
+        'subtitle': subtitle,
+        'label': label,
+        'imageUrl': imageUrl,
+      });
+      Get.toNamed(Routes.NO_VIDEO, arguments: {
+        'title': title,
+        'subtitle': subtitle,
+        'label': label,
+        'imageUrl': imageUrl,
+      });
     } else {
       Get.toNamed(Routes.VIDEO_PLAYER, arguments: {
         'title': title,

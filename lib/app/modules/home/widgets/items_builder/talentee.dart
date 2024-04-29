@@ -30,6 +30,9 @@ class TalenteeItemsBuilder extends StatelessWidget {
                 onTap: () => controller.validateGoToVideoPlayer(
                   urlVideo: e.videoUrl,
                   title: e.name,
+                  subtitle: e.about,
+                  label: e.career,
+                  imageUrl: e.avatar,
                 ),
                 child: Container(
                   height: 250,

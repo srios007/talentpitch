@@ -14,7 +14,7 @@ Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs,
 * Firebase storage
 * Firestore
 
-### Descripción del reto realizad
+### Descripción del reto realizado
 
 Se realizó una aplicación que permite a los usuarios lo siguiente:
 
@@ -28,7 +28,7 @@ Se realizó una aplicación que permite a los usuarios lo siguiente:
 * Ver el perfil del usuario, donde podrá ver su información y foto de perfil
 * Cerrar sesión
 
-### Justificación de la prueba:
+### Justificación de la prueba
 
 * Se utilizó **GetX** como manejador de estado, ya que esta nos brinda, navegación, alertas, uso de controladores para el manejo del estado, entre otros. Además, es una librería que se integra muy bien con flutter y es muy fácil de usar.
 * Para la persistencia local de los favoritos se utilizó la librería **Get Storage**, ya que es una librería muy sencilla de usar para obtener y guardar información

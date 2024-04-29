@@ -11,7 +11,6 @@ class FavoritesController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    box.erase();
     initializeFavoritesList();
   }
 

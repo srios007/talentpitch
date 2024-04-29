@@ -25,9 +25,9 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
               child: Column(
                 children: [
                   const Spacer(flex: 2),
-                  inputsSection(),
+                  _inputsSection(),
                   const Spacer(flex: 2),
-                  recoverButton(),
+                  _recoverButton(),
                   const SizedBox(height: 10),
                 ],
               ),
@@ -39,7 +39,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
   }
 
   /// Campos de texto (correo y contraseña)
-  inputsSection() {
+  _inputsSection() {
     return Form(
       key: controller.key,
       child: Column(
@@ -56,7 +56,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
   }
 
   /// Botón que inicia sesión
-  recoverButton() {
+  _recoverButton() {
     return Align(
       alignment: Alignment.bottomCenter,
       child: CustomButton(

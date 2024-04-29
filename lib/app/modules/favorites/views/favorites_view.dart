@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:talentpitch/app/models/favorite.dart';
 import 'package:talentpitch/app/modules/favorites/controllers/favorites_controller.dart';
 import 'package:talentpitch/app/routes/app_pages.dart';
+import 'package:talentpitch/app/utils/palette.dart';
 
 class FavoritesView extends GetView<FavoritesController> {
   const FavoritesView({super.key});
@@ -49,7 +50,10 @@ class FavoritesView extends GetView<FavoritesController> {
   _serviceCard(int index, Favorite favorite) {
     return Card(
       child: ListTile(
-        title: Text(favorite.name!),
+        title: Text(
+          favorite.name!,
+          style: const TextStyle(fontWeight: FontWeight.bold),
+        ),
         subtitle: Text(favorite.url!),
         onTap: () {
           Get.toNamed(Routes.VIDEO_PLAYER, arguments: {
@@ -58,7 +62,7 @@ class FavoritesView extends GetView<FavoritesController> {
           });
         },
         trailing: IconButton(
-          icon: const Icon(Icons.delete),
+          icon: const Icon(Icons.delete, color: Palette.red),
           onPressed: () {
             controller.deleteFavorite(index);
           },

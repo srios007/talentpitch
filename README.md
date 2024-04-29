@@ -25,7 +25,7 @@ Se realizó una aplicación que permite a los usuarios lo siguiente:
 * Ver el listado de videos de una categoría, en caso de no tenerlo, se le mostrará una pantalla con información adicional
 * Reproductor de video, que le permite al usuario ver el video, pausarlo, reiniciarlo y agregarlo a favoritos
 * Ver el listado de videos favoritos
-* Ver el perfil del usuario, donde podrá ver su información y foto de perfil
+* Ver el perfil del usuario, donde podrá visualizar su información y foto de perfil
 * Cerrar sesión
 
 ### Justificación de la prueba

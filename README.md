@@ -14,6 +14,26 @@ Demostrar habilidades avanzadas en el consumo y procesamiento eficiente de APIs,
 * Firebase storage
 * Firestore
 
+### Descripción del reto realizado:
+
+Se realizó una aplicación que permite a los usuarios lo siguiente:
+
+* Registrarse, además permite subir una foto que se alojará en firebase storage
+* Iniciar sesión, esto se hará de manera persistente, es decir, si el usuario cierra la aplicación y la vuelve a abrir, no tendrá que iniciar sesión nuevamente
+* Recuperar su contraseña mediante el correo
+* Ver el listado de categorías
+* Ver el listado de videos de una categoría, en caso de no tenerlo, se le mostrará una pantalla con información adicional
+* Reproductor de video, que le permite al usuario ver el video, pausarlo, reiniciarlo y agregarlo a favoritos
+* Ver el listado de videos favoritos
+* Ver el perfil del usuario, donde podrá ver su información y foto de perfil
+* Cerrar sesión
+
+### Justificación de tecnologías:
+
+* Se utilizó **GetX** como manejador de estado, ya que esta nos brinda, navegación, alertas, uso de controladores para el manejo del estado, entre otros. Además, es una librería que se integra muy bien con flutter y es muy fácil de usar.
+* Para la persistencia local de los favoritos se utilizó **Get Storage**, ya que es una librería muy sencilla de usar para obtener y guardar información.
+
+
 ### Instalación 
 
 1. Clonar el siguiente repositorio:

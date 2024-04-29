@@ -17,7 +17,7 @@ class Company {
     this.video,
   });
 
-    factory Company.fromJson(Map<String, dynamic> json) =>
+  factory Company.fromJson(Map<String, dynamic> json) =>
       _$CompanyFromJson(json);
 
   Map<String, dynamic> toJson() => _$CompanyToJson(this);

@@ -26,9 +26,9 @@ class ProfileView extends GetView<ProfileController> {
                 children: [
                   userPhoto(),
                   const SizedBox(height: 40),
-                  userInfoLabels(),
+                  _userInfoLabels(),
                   const Spacer(),
-                  logoutIconLabel(context),
+                  _logoutIconLabel(context),
                 ],
               ),
             ),
@@ -39,7 +39,7 @@ class ProfileView extends GetView<ProfileController> {
   }
 
   /// Widget con el cual el usuario pued ecerrar sesión
-  logoutIconLabel(BuildContext context) {
+  _logoutIconLabel(BuildContext context) {
     return InkWell(
       onTap: () {
         controller.logout();
@@ -66,7 +66,7 @@ class ProfileView extends GetView<ProfileController> {
   }
 
   /// Información del usuario
-  userInfoLabels() {
+  _userInfoLabels() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

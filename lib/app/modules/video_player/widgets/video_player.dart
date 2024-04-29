@@ -65,7 +65,7 @@ class _VideoPlayerState extends State<VideoPlayer> {
           const SizedBox(width: 10),
           FloatingActionButton(
             onPressed: () {
-              widget.controller.favoritesController.addFavorite(
+              widget.controller.favoritesController.addFavoriteToLocalStorage(
                 title: widget.controller.title.value,
                 urlVideo: widget.controller.urlVideo.value,
               );

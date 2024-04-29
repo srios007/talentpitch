@@ -57,13 +57,13 @@ class CategoryCard extends StatelessWidget {
   /// Determina que cards cargar en la lista por tipo de categoría
   itemsBuilder() {
     if (category.type == CategoryType.talentees) {
-      return TalenteeItemsBuilder(category: category);
+      return TalenteeItemsBuilder(category: category, controller: controller);
     } else if (category.type == CategoryType.challenges) {
-      return ChallengeItemsBuilder(category: category);
+      return ChallengeItemsBuilder(category: category, controller: controller);
     } else if (category.type == CategoryType.companies) {
-      return CompanyItemsBuilder(category: category);
+      return CompanyItemsBuilder(category: category, controller: controller);
     }
-    return TalenteeItemsBuilder(category: category);
+    return TalenteeItemsBuilder(category: category, controller: controller);
   }
 
   /// Determina el color del card por tipo de categoría

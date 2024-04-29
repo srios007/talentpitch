@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:talentpitch/app/models/category.dart';
-import 'package:talentpitch/app/routes/app_pages.dart';
+import 'package:talentpitch/app/modules/home/controllers/home_controller.dart';
 import 'package:talentpitch/app/services/services.dart';
 import 'package:talentpitch/app/utils/utils.dart';
 import 'package:talentpitch/app/widgets/widgets.dart';
@@ -10,9 +9,11 @@ class ChallengeItemsBuilder extends StatelessWidget {
   const ChallengeItemsBuilder({
     super.key,
     required this.category,
+    required this.controller,
   });
 
   final Category category;
+  final HomeController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +27,10 @@ class ChallengeItemsBuilder extends StatelessWidget {
           child: Row(children: [
             ...items.data!.map((e) {
               return GestureDetector(
-                onTap: () => Get.toNamed(Routes.VIDEO_PLAYER, arguments: {
-                  'title': e.companyName,
-                  'urlVideo': e.video,
-                }),
+                onTap: () => controller.validateGoToVideoPlayer(
+                  urlVideo: e.video,
+                  title: e.companyName,
+                ),
                 child: Container(
                   height: 250,
                   width: 120,

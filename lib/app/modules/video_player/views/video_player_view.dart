@@ -26,7 +26,11 @@ class _VideoAppState extends State<VideoApp> {
     super.initState();
     _controller = videoPlayer.VideoPlayerController.networkUrl(
         Uri.parse(widget.controller.urlVideo.value))
-      ..initialize().then((_) {});
+      ..initialize().then((_) {
+        setState(() {
+          _controller.play();
+        });
+      });
   }
 
   @override
@@ -42,7 +46,7 @@ class _VideoAppState extends State<VideoApp> {
                 aspectRatio: _controller.value.aspectRatio,
                 child: videoPlayer.VideoPlayer(_controller),
               )
-            : Container(),
+            : Text('Cargando...'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

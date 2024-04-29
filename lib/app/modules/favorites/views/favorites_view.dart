@@ -11,10 +11,12 @@ class FavoritesView extends GetView<FavoritesController> {
         title: const Text('FavoritesView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'FavoritesView is working',
-          style: TextStyle(fontSize: 20),
+      body: Center(
+        child: Obx(
+          () => Text(
+            controller.favorites.length.toString(),
+            style: TextStyle(fontSize: 20),
+          ),
         ),
       ),
     );

@@ -3,7 +3,6 @@ import 'package:talentpitch/app/modules/video_player/controllers/video_player_co
 import 'package:talentpitch/app/widgets/widgets.dart';
 import 'package:video_player/video_player.dart' as videoPlayer;
 
-
 class VideoPlayer extends StatefulWidget {
   const VideoPlayer({super.key, required this.controller});
   final VideoPlayerController controller;
@@ -66,14 +65,25 @@ class _VideoPlayerState extends State<VideoPlayer> {
           const SizedBox(width: 10),
           FloatingActionButton(
             onPressed: () {
-              setState(() {
-                _controller.value.isPlaying
-                    ? _controller.pause()
-                    : _controller.play();
-              });
+              widget.controller.favoritesController.addFavorite(
+                title: widget.controller.title.value,
+                urlVideo: widget.controller.urlVideo.value,
+              );
             },
             child: Icon(
               Icons.favorite,
+            ),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                _controller.seekTo(Duration.zero);
+                _controller.play();
+              });
+            },
+            child: Icon(
+              Icons.autorenew,
             ),
           ),
         ],
